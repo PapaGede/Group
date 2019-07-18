@@ -3,9 +3,8 @@ from flask import Flask,render_template,url_for
 app = Flask(__name__)
 
 @app.route('/')
-def first():
-    return 'My Demo Web'
-
+def index():
+    return render_template('index.html')
 @app.route('/whereami')
 def whereami():
     return 'Ghana'
@@ -14,9 +13,7 @@ def whereami():
 def numbers():
     return 'In a class of 30 people only 15 came ouch'
 
-@app.route('/webpages')
-def index():
-    return render_template('index.html')
+
 
 @app.route('/linki')
 def mainp():
